@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['id']))
+{
+    header("Location: /main.php");
+}
+
+?>
 
 <html lang="en">
 <head>
