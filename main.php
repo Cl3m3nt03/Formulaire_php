@@ -1,10 +1,11 @@
 <?php
 session_start();
-if(!$_SESSION['mdp']){
+if(empty($_SESSION['mdp'])){
     header('Location: connexion.php');
 }
 echo $_SESSION['pseudo'];
-   
+
+
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +15,7 @@ echo $_SESSION['pseudo'];
     <title>test</title>
 </head>
 <body>
-    
-<a href="connexion.php"><button>Se deconnecter</button></a>
+<a href="logout.php"><button>Se deconnecter</button></a>
 
 </body>
 </html>
